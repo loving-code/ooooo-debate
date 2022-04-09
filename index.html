@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>Case study</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body background="Background.jpeg">
+<center>
+  <h3 class="btn heading">Case study between google lens and mobilenet
+    <hr>
+    <center>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 heading_div">
+        Google lens
+        &nbsp;
+        &nbsp;
+        <span><img class="Logo_1" src="data:image/png;base64,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"></span>
+        <br>
+        vs
+        <br>
+          <div class="btn btn-primary heading_div2">
+          Mobilenet
+          </div>
+        </div>
+    </center>
+    <ol>
+      <div class="test_I_R col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="bottle.jpeg" class="img-responsive">
+        </li>
+
+        <h5 id="bingo" class=" col-lg-5 col-sm-4 col-xs-12">
+          Output on <b>Google lens</b>
+          <span>
+            </span>
+        </h5>
+        <h5 id="bongo" class="col-lg-5 col-sm-4 col-xs-12">
+          Output on <b>Mobile net model</b> -
+          <span></span>
+        </h5>
+        <br>
+        <div class="mini_result" class="col-xs-12">
+          <h4> Result - </h4>
+          <hr>
+          <h4> </h4>
+        </div>
+      </div>
+
+    </ol>
+
+ 
+<div class="copy_right_footer">
+Developed by - WhitehatJr Team
+</div>
+
+<script src="main.js"></script>
+</body>
+
+</html>
+
+
